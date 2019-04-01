@@ -13,8 +13,8 @@ $(function() {
     var list = groceries.map(function(grocery) {
       return grocery.toUpperCase();
     });
-    console.log(groceries);
     console.log(list);
+
     // $('div.list').append(groceries);
     event.preventDefault();
   })
