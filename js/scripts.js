@@ -10,12 +10,18 @@ $(function() {
   $('form').submit(function(event) {
     $('form').hide();
     groceries.sort();
+
     var list = groceries.map(function(grocery) {
       return grocery.toUpperCase();
     });
+    
     console.log(list);
 
-    // $('div.list').append(groceries);
+    list.forEach(function(output) {
+
+      $('#list').append("<li>" + output + "</li>");
+    });
+
     event.preventDefault();
   })
 });
